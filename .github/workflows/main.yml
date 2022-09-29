@@ -1,0 +1,26 @@
+name: Build 
+
+on:
+  pull_request: 
+        types: [ opened, edited, synchronize, reopened ] 
+
+jobs:
+  GithubTest:
+    name: TiCS
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: TICS Action Run
+        uses: tiobe/tics-github-action@main
+        env: 
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          TICSAUTHTOKEN: 'MmQ0NTRjZmEtZTY0ZC00N2NiLWI0M2YtYzgxOWY2MzEyNGUyOk54LE4vcG9ZKFp7TFlzWg'
+        with:
+          projectName: 'cpp-game-git'
+          branchName: 'trunk'
+          ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab_windows'
+          calc: 'CS,GATE'
+          clientToken: 'MmQ0NTRjZmEtZTY0ZC00N2NiLWI0M2YtYzgxOWY2MzEyNGUyOk54LE4vcG9ZKFp7TFlzWg'
+          installTics: true
+          
+    

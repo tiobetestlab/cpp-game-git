@@ -9,6 +9,8 @@ jobs:
     name: TiCS
     runs-on: windows-latest
     steps:
+      - name: setup-msbuild
+        uses: microsoft/setup-msbuild@v1.1
       - uses: actions/checkout@v2
       - name: TICS Action Run
         uses: tiobe/tics-github-action@v1.0.0-alpha

@@ -1,4 +1,4 @@
-﻿#include <iostream>
+﻿#include <iostream> 
 #include "game.h"
 
 using namespace std;
@@ -10,7 +10,7 @@ int main()
 
     int* mypointer;
 
-    mypointer = NULL;
+    mypointer = NULL; 
     *mypointer = 30;
 
     wchar_t w = L'Â';

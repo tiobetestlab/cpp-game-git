@@ -1,4 +1,4 @@
-#include "game.h"
+#include "game.h" 
 
 #include <ctime>
 #include <iostream>
@@ -52,12 +52,12 @@ Rule::Choice Rule::GameLogic::operator()(const Rule::Choice lhs, const Rule::Cho
     if (lhs == rhs) throw std::domain_error("Do not handle same choice of symbol");
 
     /*
-     * • Fist equals rock
-     * • Open hand equals paper
-     * • Showing the index and middle finger equals scissors.
-     * • paper beats (wraps) rock
-     * • rock beats (blunts) scissors
-     * • scissors beats (cuts) paper.
+     * • Fist equals rock 
+     * • Open hand equals paper 
+     * • Showing the index and middle finger equals scissors. 
+     * • paper beats (wraps) rock 
+     * • rock beats (blunts) scissors 
+     * • scissors beats (cuts) paper. 
      */
     std::map<std::tuple<Rule::Choice, Rule::Choice>, Rule::Choice> rule;
     rule[std::make_tuple(Rule::Choice::ROCK, Rule::Choice::PAPER)] = Rule::Choice::PAPER;
@@ -77,7 +77,7 @@ std::unique_ptr<Rule::Choice[]> ComputerResponse::random_actions(size_t number_g
     const int number_of_choices = 3;
     srand( (unsigned)time( NULL ) );
     for (size_t i = 0; i < number_games_tobe_played; ++i) {
-       p[i] = Global::mapping_choice(rand() % number_of_choices + 1);
+       p[i] = Global::mapping_choice(rand() % number_of_choices + 1); 
     }
     return p;
 }

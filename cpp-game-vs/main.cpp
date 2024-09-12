@@ -1,4 +1,4 @@
-﻿#include <iostream>
+﻿#include <iostream> 
 #include "game.h"
 
 using namespace std;
@@ -7,12 +7,10 @@ int main()
 {
     int plays = Global::number_of_play(), counter = 0, player_score = 0, ai_score = 0;
     auto ai = ComputerResponse::random_actions(plays);
-    char t[4] = "C++";
-    strcpy_s(t, "C++++++");
 
     int* mypointer;
 
-    mypointer = NULL;
+    mypointer = NULL; 
     *mypointer = 30;
 
     wchar_t w = L'Â';

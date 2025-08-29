@@ -14,7 +14,7 @@ jobs:
         uses: tiobe/tics-github-action@v3
         with:
           project: 'cpp-game-git'
-          branchname: 'trunk'
+          branchname: 'main'
           ticsAuthToken: ${{secrets.TESTLAB_VIEWER}}
           viewerUrl: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=default'
           calc: 'CS'

@@ -8,6 +8,8 @@
 #include <tuple>
 #include <memory>
 
+#define LOCAL_TRACE_INT(x, y) x << y
+
 Rule::Choice Global::mapping_choice(int choice) {
     std::map<int, Rule::Choice> table = {
         {1, Rule::Choice::PAPER},
@@ -159,4 +161,5 @@ void Assets::scissor_sign() {
     std::cout << "__________$________________$" << std::endl;
     std::cout << "__________$" << std::endl;
 }
+
 

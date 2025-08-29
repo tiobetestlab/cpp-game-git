@@ -16,7 +16,7 @@ jobs:
           project: 'cpp-game-git'
           branchname: 'trunk'
           ticsAuthToken: ${{secrets.TESTLAB_VIEWER}}
-          viewerUrl: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab_windows'
+          viewerUrl: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=default'
           calc: 'CS'
           installTics: true
           

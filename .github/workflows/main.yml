@@ -10,6 +10,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v2
+      - name: Build app for release
+        run: msbuild -t:build -property:Configuration=Release|x64
       - name: TICS Action Run
         uses: tiobe/tics-github-action@v3
         with:
